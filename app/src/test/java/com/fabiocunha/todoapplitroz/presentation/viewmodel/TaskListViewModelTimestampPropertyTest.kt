@@ -1,5 +1,6 @@
 package com.fabiocunha.todoapplitroz.presentation.viewmodel
 
+import android.content.Context
 import com.fabiocunha.todoapplitroz.domain.model.SyncStatus
 import com.fabiocunha.todoapplitroz.domain.model.Task
 import com.fabiocunha.todoapplitroz.domain.monitor.NetworkMonitor
@@ -16,6 +17,8 @@ import io.kotest.property.arbitrary.boolean
 import io.kotest.property.arbitrary.long
 import io.kotest.property.arbitrary.string
 import io.kotest.property.checkAll
+import io.mockk.every
+import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -82,7 +85,13 @@ class TaskListViewModelTimestampPropertyTest : StringSpec({
                 val deleteTaskUseCase = DeleteTaskUseCase(mockRepository)
                 val syncTasksUseCase = SyncTasksUseCase(mockRepository)
 
+                val mockContext = mockk<Context> {
+                    every { getString(any(), any()) } returns "Test error message"
+                    every { getString(any()) } returns "Test message"
+                }
+
                 val viewModel = TaskListViewModel(
+                    mockContext,
                     mockRepository,
                     mockNetworkMonitor,
                     createTaskUseCase,
@@ -157,7 +166,13 @@ class TaskListViewModelTimestampPropertyTest : StringSpec({
                 val deleteTaskUseCase = DeleteTaskUseCase(mockRepository)
                 val syncTasksUseCase = SyncTasksUseCase(mockRepository)
 
+                val mockContext = mockk<Context> {
+                    every { getString(any(), any()) } returns "Test error message"
+                    every { getString(any()) } returns "Test message"
+                }
+
                 val viewModel = TaskListViewModel(
+                    mockContext,
                     mockRepository,
                     mockNetworkMonitor,
                     createTaskUseCase,
