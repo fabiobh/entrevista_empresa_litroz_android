@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">TodoAppLitroz</string>
+    
+    <!-- Task Dialog Strings -->
+    <string name="add_new_task">Adicionar Nova Tarefa</string>
+    <string name="enter_task_description">Digite uma descrição para sua tarefa:</string>
+    <string name="task_description">Descrição da tarefa</string>
+    <string name="task_description_empty_error">A descrição da tarefa não pode estar vazia</string>
+    <string name="add_task">Adicionar Tarefa</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete_task">Excluir Tarefa</string>
+    <string name="delete_task_confirmation">Tem certeza de que deseja excluir esta tarefa?</string>
+    <string name="delete_action_irreversible">Esta ação não pode ser desfeita.</string>
+    <string name="delete">Excluir</string>
+    
+    <!-- Task List Screen Strings -->
+    <string name="my_tasks">Minhas Tarefas</string>
+    <string name="sync_tasks">Sincronizar tarefas</string>
+    <string name="add_task_content_description">Adicionar tarefa</string>
+    <string name="delete_task_content_description">Excluir tarefa</string>
+    <string name="dismiss">Dispensar</string>
+    <string name="save">Salvar</string>
+    <string name="loading_tasks">Carregando tarefas...</string>
+    <string name="no_tasks_yet">Ainda não há tarefas</string>
+    <string name="add_first_task">Adicione sua primeira tarefa para começar</string>
+    
+    <!-- Sync Status Strings -->
+    <string name="synced">Sincronizado</string>
+    <string name="pending_create">Criação Pendente</string>
+    <string name="pending_update">Atualização Pendente</string>
+    <string name="pending_delete">Exclusão Pendente</string>
+    
+    <!-- Network Status Strings -->
+    <string name="syncing">Sincronizando...</string>
+    <string name="online_all_synced">Online - Tudo sincronizado</string>
+    <string name="online_pending_format">Online - %d pendente(s)</string>
+    <string name="offline">Offline</string>
+    
+    <!-- Greeting (for preview) -->
+    <string name="hello_format">Olá %s!</string>
+    <string name="android">Android</string>
+    
+    <!-- Error Messages -->
+    <string name="error_load_tasks">Falha ao carregar tarefas: %s</string>
+    <string name="error_create_task">Falha ao criar tarefa: %s</string>
+    <string name="error_update_task">Falha ao atualizar tarefa: %s</string>
+    <string name="error_delete_task">Falha ao excluir tarefa: %s</string>
+    <string name="error_sync_tasks">Falha ao sincronizar tarefas: %s</string>
+    <string name="error_task_description_empty">A descrição da tarefa não pode estar vazia</string>
+</resources>
