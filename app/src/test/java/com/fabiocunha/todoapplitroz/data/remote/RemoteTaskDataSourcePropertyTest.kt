@@ -8,8 +8,6 @@ import kotlinx.coroutines.test.runTest
 
 /**
  * Basic tests for RemoteTaskDataSource
- * **Feature: offline-task-sync, Property 3: Sync Engine Completeness**
- * **Validates: Requirements 6.1, 6.2, 6.5**
  */
 class RemoteTaskDataSourcePropertyTest : StringSpec({
 
@@ -18,7 +16,7 @@ class RemoteTaskDataSourcePropertyTest : StringSpec({
             val mockApiService = mockk<TaskApiService>()
             val dataSource = RemoteTaskDataSource(mockApiService)
             
-            // Just verify the data source can be instantiated
+            // Verify the data source can be instantiated
             dataSource shouldBe dataSource
         }
     }
